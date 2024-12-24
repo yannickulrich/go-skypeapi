@@ -330,7 +330,7 @@ func (c *Conn) SkypeRegistrationTokenProvider(skypeToken string) (err error) {
 		"BehaviorOverride": "redirectAs404",
 	}
 	data := map[string]interface{}{
-		"endpointFeatures": "Agent",
+		"endpointFeatures": "Agent,MessageProperties",
 	}
 	params, _ := json.Marshal(data)
 	registrationTokenStr, location, err := req.HttpPostRegistrationToken(c.LoginInfo.LocationHost+"/v1/users/"+DEFAULT_USER+"/endpoints", string(params), header)

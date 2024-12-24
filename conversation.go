@@ -132,7 +132,7 @@ type Resource struct {
 	AckRequired           string        `json:"ackrequired"`
 	ContentType           string        `json:"contenttype"`
 	IsVideoCall           string        `json:"isVideoCall"` // "FALSE|TRUE"
-	IsActive              bool          `json:"isactive"`
+	// IsActive              bool          `json:"isactive"`
 	ThreadTopic           string        `json:"threadtopic"`
 	ContentFormat         string        `json:"contentformat"`
 	ETag                  string        `json:"eTag"`
