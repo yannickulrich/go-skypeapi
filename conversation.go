@@ -114,6 +114,17 @@ type ShareLink struct {
 	Url string `json:"url"`
 }
 
+type EmotionUser struct {
+	Mri   string  `json:"mri"`
+	Time  int     `json:"time"`
+	Value string  `json:"value"`
+}
+
+type Emotion struct {
+	Key string `json:"key"`
+	Users []EmotionUser
+}
+
 type Resource struct {
 	ConversationLink      string        `json:"conversationLink"`
 	Type                  string        `json:"type"`
@@ -147,6 +158,7 @@ type Resource struct {
 	Properties    struct {
 		UrlPreviews  string   `json:"urlpreviews"`
 		Capabilities []string `json:"capabilities"`
+		Emotions     []Emotion `json:"emotions"`
 	} `json:"properties"`
 }
 
