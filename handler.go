@@ -144,7 +144,7 @@ type ChatUpdateHandler interface {
 
 func (c *Conn) handleWithCustomHandlers(message Conversation, handlers []Handler) {
 	//switch m := message.(type) {
-	if message.ResourceType == "NewMessage" {
+	if message.ResourceType == "NewMessage" || message.ResourceType == "MessageUpdate" {
 		//resource := Resource{}
 		//resource, ok := (message.Resource).(Resource)
 		//if !ok {
